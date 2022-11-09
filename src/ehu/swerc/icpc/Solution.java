@@ -8,8 +8,9 @@ import static java.util.stream.Collectors.toList;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        String base = "src/ehu/swerc/";
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(new File(base + "icpc/input.txt"))));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(base + "icpc/output.txt"));
 
         String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
 
